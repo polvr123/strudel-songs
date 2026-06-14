@@ -1,0 +1,64 @@
+
+stack(
+  sound("numbers:1").gain(1.2),
+  sound("numbers:2").gain(1.9),
+  sound("cp:4").gain(1),
+  sound("perc:3").gain(1),
+
+  sound("~ yeah:0 ~ hey:0 ~ yeah:1 ~ ho:0"),
+  
+  s("bd ~ ~ bd ~ bd ~ ~")
+    .gain("2.4 2.4 2.4")
+    .room(0.15),
+
+  s("~ cp ~ ~ [cp ~] ~ cp ~")
+    .gain(.55)
+    .speed("0.9 1.1 1")
+    .room(0.25),
+
+  note("~ b5 ~ a#5 b5 ~ ~ b5")
+    .s("triangle")
+    .gain(.10)
+    .attack(0.01)
+    .release(0.12)
+    .delay(0.18),
+
+  s("bd ~ ~ bd ~ bd ~ ~")
+    .gain(".4 0.4 0.4")
+    .shape(0.25),
+
+s("~ cp ~ ~ cp ~ ~ cp")
+    .gain(0.65)
+    .room(0.2),
+
+  s("hh*8")
+    .gain("[0.18 0.12]*4")
+    .speed("1 1.08 0.95 1.15")
+    .hpf(5000),
+
+  s("perc:3 ~ perc:3 ~ [perc:3 perc:3] ~ perc:3 ~")
+    .gain(0.15)
+    .speed("0.85 1.1 0.9")
+    .pan("0.2 -0.2"),
+
+  s("numbers:1 ~ numbers:1 ~ numbers:1 ~ numbers:1 ~")
+    .gain(1.5)
+    .speed("0.72 0.78 0.7 0.82")
+    .lpf(2600)
+    .room(0.15),
+
+  note("c2 ~ c2 ~ eb2 ~ c2 ~")
+    .s("sawtooth")
+    .gain(1)
+    .lpf(450)
+    .attack(0.01)
+    .release(0.18)
+    .distort(0.35),
+
+  note("~ g4 ~ f4 ~ eb4 f4 ~")
+    .s("square")
+    .gain(.1)
+    .lpf(1200)
+    .room(0.35)
+)
+
