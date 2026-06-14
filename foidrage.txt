@@ -1,0 +1,26 @@
+setcps(143/60/4)
+
+$: s("sbd!8")._scope()
+$: s("cp*4")._scope()
+$: s("sawtooth")._scope()
+$: note("c2 ~ c3 e3")._scope()
+  .s("square")
+  .gain(2)
+  .lpf(200)
+  .distort("1.5")
+  .room(.1)
+
+$: s("sbd ~ sbd ~ !8")._scope()
+  .gain(5)
+  .lpf(180)
+  .distort(.4)
+  .room(.1)
+
+$: duck("2:3:4").duckattack(.2).duckdepth(.8)._scope()
+samples({
+  foidrage: 'foidrage.wav'
+}, 'https://raw.githubusercontent.com/polvr123/strudel-songs/main/');
+
+$: s("foidrage:0")
+  .gain(1)
+  
