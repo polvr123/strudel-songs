@@ -23,4 +23,6 @@ samples({
 
 $: s("foidrage:0")
   .gain(1)
+
+  //screaming audio used in inspiration of punk rock and emo music 
   
